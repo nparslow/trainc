@@ -3,7 +3,7 @@
 = HMM State List =
 One HMM state symbol per line.
 
-HMM state symbol: <phone>_<state>.
+HMM state symbol: `<phone>_<state>`.
 
 E.g. `a_1` for the second state of phone `a`
 
@@ -13,7 +13,7 @@ One phone symbol per line.
 = Phone Lengths =
 Format: `<phone> <# states>`
 
-== Example ==
+=== Example ===
 {{{
 a 3
 b 3
@@ -23,7 +23,7 @@ si 1
 = Phone Map =
 Format: `<phone-from> <phone-to>`
 
-== Example ==
+=== Example ===
 {{{
 a@i a
 a@f a
@@ -34,9 +34,9 @@ b@f b
 Phone `a@i` is initially mapped to phone `a`, etc.
 
 = Question Sets =
-Format: <question-name> <phone> <phone> ...
+Format: `<question-name> <phone> <phone> ...`
 
-== Example ==
+=== Example ===
 {{{
 CONSONANT-POSTALVEOLAR sh zh
 CONSONANT-VELAR k g ng
