@@ -8,7 +8,7 @@
  * `--phone_length` (_string_): phone lengths definition, i.e. number of HMM states per phone. If not set, the number of states is deduced from the statistics. Unobserved states may then lead to wrong phone length.
  * `--phone_map` (_string_): mapping of phones with tied models. Map central phones of allophone models to another phone. This is useful for adding wordboundary information.
  * `--phone_sets` (_string_): context class definitions.
- * `--phone_sets_pos` (_string_): context class per position. Define separate question sets per context position. Format for this option is `pos=file,pos=file,...` with pos in `[-num_left_contexts .. 0 .. num_right_contexts]. Positions which are not defined, are assigned to the default question set (option `--phone_sets`).
+ * `--phone_sets_pos` (_string_): context class per position. Define separate question sets per context position. Format for this option is `pos=file,pos=file,...` with pos in `[-num_left_contexts .. 0 .. num_right_contexts]`. Positions which are not defined, are assigned to the default question set (option `--phone_sets`).
  * `--phone_syms` (_string_): symbol table for CI phone (output) symbols.
  * `--replay` (_string_): execute the splits from the given file. 
  * `--samples_file` (_string_): sample data file.
