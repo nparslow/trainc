@@ -60,6 +60,8 @@ with
  * `<phone> := string`
  * `<hmm_state> := int`
 
+`<version>` is currently `1`
+
 `<context>` is always from leftmost context phone to right.
 Example: state 1 of phone `A` with left context `B C` and right context `D E`: 
 {{{
