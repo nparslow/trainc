@@ -1,19 +1,19 @@
 #summary Command Line Options.
 
 = Input Files =
- * `--ci_state_list` (_string_): list of context independent HMM state models.
- * `--counting_transducer` (_string_): transducer used for counting states. Usually a lexicon transducer.
- * `--final_phones` (_string_): file containing word end phones. One phone symbol per line.
- * `--initial_phones` (_string_): file containing word initial phones. One phone symbol per line.
- * `--phone_length` (_string_): phone lengths definition, i.e. number of HMM states per phone. If not set, the number of states is deduced from the statistics. Unobserved states may then lead to wrong phone length.
- * `--phone_map` (_string_): mapping of phones with tied models. Map central phones of allophone models to another phone. This is useful for adding wordboundary information.
- * `--phone_sets` (_string_): context class definitions. Phonetic questions used for splitting.
- * `--phone_sets_pos` (_string_): context class per position. Define separate question sets per context position. Format for this option is `pos=file,pos=file,...` with pos in `[-num_left_contexts .. 0 .. num_right_contexts]`. Positions which are not defined, are assigned to the default question set (option `--phone_sets`).
- * `--phone_syms` (_string_): symbol table for CI phone (output) symbols.
- * `--replay` (_string_): execute the splits from the given file. 
- * `--samples_file` (_string_): sample data file.
+ * `--ci_state_list` (_string_): file containing context independent HMM state models. [InputFormats HMM state list].
+ * `--counting_transducer` (_string_): transducer used for counting states. Usually a lexicon transducer. If not given, the C transducer will be used for counting. OpenFst `vector` FST.
+ * `--final_phones` (_string_): file containing word end phones. [InputFormats phone list].
+ * `--initial_phones` (_string_): file containing word initial phones. [InputFormats phone list].
+ * `--phone_length` (_string_): phone lengths definition, i.e. number of HMM states per phone. If not set, the number of states is deduced from the statistics. Unobserved states may then lead to wrong phone length. [InputFormats phone lengths].
+ * `--phone_map` (_string_): mapping of phones with tied models. Map central phones of allophone models to another phone. This is useful for adding wordboundary information. [InputFormats phone map].
+ * `--phone_sets` (_string_): context class definitions. Phonetic questions used for splitting. [InputFormats question sets].
+ * `--phone_sets_pos` (_string_): context class per position. Define separate question sets per context position. Format for this option is `pos=file,pos=file,...` with `pos` in `[-num_left_contexts .. 0 .. num_right_contexts]`. Positions which are not defined, are assigned to the default question set (option `--phone_sets`). [InputFormats question sets].
+ * `--phone_syms` (_string_): symbol table for CI phone (output) symbols. OpenFst symbol table (text format).
+ * `--replay` (_string_): execute the splits from the given file. Binary split sequence, generated with `--save_splits`.
+ * `--samples_file` (_string_): sample data file. File type depends on `--sample_type`.
  * `--sample_type` (_enum_): sample file type. default: `text`
-  * `text`: [SamplesTextFormat samples text format]
+  * `text`: [InputFormats samples text format].
 
 
 = Options =
